@@ -11,6 +11,7 @@
 <body>
 	${product.name }<br>
 	${product.age }<br>
+	${name }<br>
 	<%
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

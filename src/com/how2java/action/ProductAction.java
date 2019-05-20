@@ -1,17 +1,25 @@
 package com.how2java.action;
- 
+
+import java.util.Map;
+
 import com.how2java.bean.Product;
- 
-public class ProductAction {
+import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class ProductAction extends ActionSupport{
     private Product product;
  
     public String show() {
+    	
         product = new Product();
         product.setName("iphone7");
         return "show";
     }
     
     public String add(){
+    	
+    	Map m = ActionContext.getContext().getSession();
+    	m.put("name", product.getName());
     	System.out.println("product.name:" + product.getName());
     	System.out.println("product.age:" + product.getAge());
     	return "show";
