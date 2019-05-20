@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="addProduct">
+	<form action="addProduct" method="post">
 		产品名称：<input type="text" name="product.name"><br>
 		产品保质期限：<input type="text" name="product.age"><br>
 		<input type="submit" value="submit">
