@@ -38,3 +38,12 @@
 	</s:iterator>
 	
 </table>
+
+<s:checkboxlist value="selectedProducts" name="product.id" list="products" listValue="name" listKey="id" />
+
+
+
+
+
+
+

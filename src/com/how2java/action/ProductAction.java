@@ -11,10 +11,17 @@ import com.opensymphony.xwork2.ActionSupport;
 public class ProductAction extends ActionSupport{
     private Product product;
     private List<Product> products;
+    private List<Integer> selectedProducts;
     
-    
-    
-    public List<Product> getProducts() {
+    public List<Integer> getSelectedProducts() {
+		return selectedProducts;
+	}
+
+	public void setSelectedProducts(List<Integer> selectedProducts) {
+		this.selectedProducts = selectedProducts;
+	}
+
+	public List<Product> getProducts() {
 		return products;
 	}
 
@@ -40,6 +47,7 @@ public class ProductAction extends ActionSupport{
     
     public String list(){
     	products = new ArrayList();
+    	selectedProducts = new ArrayList();
     	
     	Product p1 = new Product();
     	p1.setId(1);
@@ -56,6 +64,9 @@ public class ProductAction extends ActionSupport{
     	products.add(p1);
     	products.add(p2);
     	products.add(p3);
+    	
+    	selectedProducts.add(2);
+    	selectedProducts.add(3);
     	
     	return "list";
     }
